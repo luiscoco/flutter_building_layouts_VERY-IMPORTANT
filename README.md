@@ -135,6 +135,8 @@ Once the layout has been diagrammed, it’s easiest to take a bottom-up approach
 
 ## Step 2: Implement the title row
 
+![image](https://github.com/luiscoco/flutter_building_layouts_VERY-IMPORTANT/assets/32194879/46ffa529-b7bc-473f-855b-62ce33c91a17)
+
 First, you’ll build the left column in the title section.
 
 Add the following code at the top of the build() method of the MyApp class:
