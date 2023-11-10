@@ -191,6 +191,8 @@ Widget titleSection = Container(
 
 ## Step 3: Implement the button row
 
+![image](https://github.com/luiscoco/flutter_building_layouts_VERY-IMPORTANT/assets/32194879/fa41cb22-d5d3-4144-a0be-6bc335382467)
+
 The button section contains 3 columns that use the same layout—an icon over a row of text. 
 
 The columns in this row are evenly spaced, and the text and icons are painted with the primary color.
