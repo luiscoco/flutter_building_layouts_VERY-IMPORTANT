@@ -107,7 +107,31 @@ class MyApp extends StatelessWidget {
 
 ## Step 1: Diagram the layout
 
+The first step is to break the layout down to its basic elements:
 
+Identify the rows and columns.
+
+Does the layout include a grid?
+
+Are there overlapping elements?
+
+Does the UI need tabs?
+
+Notice areas that require alignment, padding, or borders.
+
+First, identify the larger elements. In this example, four elements are arranged into a column: an image, two rows, and a block of text.
+
+![image](https://github.com/luiscoco/flutter_building_layouts_VERY-IMPORTANT/assets/32194879/d2da4866-0337-47b3-b214-3a2e00c357cc)
+
+Next, diagram each row. The first row, called the Title section, has 3 children: a column of text, a star icon, and a number. Its first child, the column, contains 2 lines of text. That first column takes a lot of space, so it must be wrapped in an Expanded widget.
+
+![image](https://github.com/luiscoco/flutter_building_layouts_VERY-IMPORTANT/assets/32194879/53f60b13-43f8-47da-b827-6fea2b555487)
+
+The second row, called the Button section, also has 3 children: each child is a column that contains an icon and text.
+
+![image](https://github.com/luiscoco/flutter_building_layouts_VERY-IMPORTANT/assets/32194879/f78dcb1b-e0b7-44ae-bc58-d3aa9bbc949d)
+
+Once the layout has been diagrammed, it’s easiest to take a bottom-up approach to implementing it. To minimize the visual confusion of deeply nested layout code, place some of the implementation in variables and functions.
 
 ## Step 2: Implement the title row
 
