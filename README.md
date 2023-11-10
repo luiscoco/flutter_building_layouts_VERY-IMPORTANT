@@ -74,7 +74,36 @@ If you want a “big picture” understanding of the layout mechanism, start wit
 
 ## Step 0: Create the app base code
 
+Make sure to set up your environment, then do the following:
 
+Create a new Flutter app.
+
+Replace the contents in lib/main.dart with the following code:
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter layout demo',
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Flutter layout demo'),
+        ),
+        body: const Center(
+          child: Text('Hello World'),
+        ),
+      ),
+    );
+  }
+}
+```
 
 ## Step 1: Diagram the layout
 
