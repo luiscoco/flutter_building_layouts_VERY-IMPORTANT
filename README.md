@@ -256,9 +256,32 @@ Add the button section to the body:
 
 ![image](https://github.com/luiscoco/flutter_building_layouts_VERY-IMPORTANT/assets/32194879/bdce284d-f603-4588-bd40-e851f41ca19c)
 
-
 ## Step 4: Implement the text section
 
+Define the text section as a variable. Put the text in a Container and add padding along each edge. Add the following code just below the buttonSection declaration:
+
+**lib/main.dart (textSection)**
+
+```dart
+Widget textSection = Container(
+  padding: const EdgeInsets.all(32),
+  child: const Text(
+    'Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese '
+    'Alps. Situated 1,578 meters above sea level, it is one of the '
+    'larger Alpine Lakes. A gondola ride from Kandersteg, followed by a '
+    'half-hour walk through pastures and pine forest, leads you to the '
+    'lake, which warms to 20 degrees Celsius in the summer. Activities '
+    'enjoyed here include rowing, and riding the summer toboggan run.',
+    softWrap: true,
+  ),
+);
+```
+
+By setting softwrap to true, text lines will fill the column width before wrapping at a word boundary.
+
+Add the text section to the body:
+
+![image](https://github.com/luiscoco/flutter_building_layouts_VERY-IMPORTANT/assets/32194879/eabae6e2-d099-49f8-91a7-20948424c123)
 
 
 ## Step 5: Implement the image section
