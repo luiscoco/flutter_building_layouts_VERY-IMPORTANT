@@ -72,6 +72,32 @@ After a discussion of how to lay widgets out horizontally and vertically, some o
 
 If you want a “big picture” understanding of the layout mechanism, start with Flutter’s approach to layout.
 
+## Step 0: Create the app base code
+
+
+
+## Step 1: Diagram the layout
+
+
+
+## Step 2: Implement the title row
+
+
+
+## Step 3: Implement the button row
+
+
+
+## Step 4: Implement the text section
+
+
+
+## Step 5: Implement the image section
+
+
+
+## Step 6: Final touch
+
 
 
 
