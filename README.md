@@ -291,18 +291,39 @@ Three of the four column elements are now complete, leaving only the image. Add 
 
 Create an images directory at the top of the project.
 
-Add lake.jpg.
+Add **lake.jpg**
 
- Note that wget doesn’t work for saving this binary file. The original image is available online under a Creative Commons license, but it’s large and slow to fetch.
+Note that wget doesn’t work for saving this binary file. 
 
-Update the pubspec.yaml file to include an assets tag. This makes the image available to your code.
+The original image is available online under a Creative Commons license, but it’s large and slow to fetch.
 
+Update the **pubspec.yaml** file to include an assets tag. This makes the image available to your code.
 
+![image](https://github.com/luiscoco/flutter_building_layouts_VERY-IMPORTANT/assets/32194879/d43e9334-4566-4975-8fa8-9461c748185c)
+
+Tip:
+
+Note that pubspec.yaml is case sensitive, so write assets: and the image URL as shown above.
+
+The pubspec file is also sensitive to white space, so use proper indentation.
+
+You might need to restart the running program (either on the simulator or a connected device) for the pubspec changes to take effect.
+
+Now you can reference the image from your code:
+
+![image](https://github.com/luiscoco/flutter_building_layouts_VERY-IMPORTANT/assets/32194879/18af5866-cfc1-488f-81c2-1b45c1d62506)
+
+BoxFit.cover tells the framework that the image should be as small as possible but cover its entire render box.
 
 ## Step 6: Final touch
 
+In this final step, arrange all of the elements in a ListView, rather than a Column, because a ListView supports app body scrolling when the app is run on a small device.
 
+![image](https://github.com/luiscoco/flutter_building_layouts_VERY-IMPORTANT/assets/32194879/e4b314a6-b946-44f2-b4bd-658b94314e66)
 
+That’s it! When you hot reload the app, you should see the same app layout as the screenshot at the top of this page.
+
+You can add interactivity to this layout by following Adding Interactivity to Your Flutter App.
 
 # Add interactivity to your Flutter app
 
