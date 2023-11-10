@@ -283,8 +283,17 @@ Add the text section to the body:
 
 ![image](https://github.com/luiscoco/flutter_building_layouts_VERY-IMPORTANT/assets/32194879/eabae6e2-d099-49f8-91a7-20948424c123)
 
-
 ## Step 5: Implement the image section
+
+Three of the four column elements are now complete, leaving only the image. Add the image file to the example:
+
+Create an images directory at the top of the project.
+
+Add lake.jpg.
+
+ Note that wget doesn’t work for saving this binary file. The original image is available online under a Creative Commons license, but it’s large and slow to fetch.
+
+Update the pubspec.yaml file to include an assets tag. This makes the image available to your code.
 
 
 
