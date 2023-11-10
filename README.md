@@ -185,11 +185,72 @@ Widget titleSection = Container(
 
 /*3*/ The last two items in the title row are a star icon, painted red, and the text “41”. The entire row is in a Container and padded along each edge by 32 pixels. Add the title section to the app body like this:
 
-
-
+![image](https://github.com/luiscoco/flutter_building_layouts_VERY-IMPORTANT/assets/32194879/9ef13403-3c4c-4cf9-bc07-9fbe08f761d2)
 
 ## Step 3: Implement the button row
 
+The button section contains 3 columns that use the same layout—an icon over a row of text. 
+
+The columns in this row are evenly spaced, and the text and icons are painted with the primary color.
+
+Since the code for building each column is almost identical, create a private helper method named buildButtonColumn(), which takes a color, an Icon and Text, and returns a column with its widgets painted in the given color.
+
+**lib/main.dart (_buildButtonColumn)**
+
+```dart
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    // ···
+  }
+
+  Column _buildButtonColumn(Color color, IconData icon, String label) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(icon, color: color),
+        Container(
+          margin: const EdgeInsets.only(top: 8),
+          child: Text(
+            label,
+            style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w400,
+              color: color,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+```
+
+The function adds the icon directly to the column. The text is inside a Container with a top-only margin, separating the text from the icon.
+
+Build the row containing these columns by calling the function and passing the color, Icon, and text specific to that column. Align the columns along the main axis using MainAxisAlignment.spaceEvenly to arrange the free space evenly before, between, and after each column. Add the following code just below the titleSection declaration inside the build() method:
+
+**lib/main.dart (buttonSection)**
+
+```dart
+Color color = Theme.of(context).primaryColor;
+
+Widget buttonSection = Row(
+  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  children: [
+    _buildButtonColumn(color, Icons.call, 'CALL'),
+    _buildButtonColumn(color, Icons.near_me, 'ROUTE'),
+    _buildButtonColumn(color, Icons.share, 'SHARE'),
+  ],
+);
+```
+
+Add the button section to the body:
+
+![image](https://github.com/luiscoco/flutter_building_layouts_VERY-IMPORTANT/assets/32194879/bdce284d-f603-4588-bd40-e851f41ca19c)
 
 
 ## Step 4: Implement the text section
