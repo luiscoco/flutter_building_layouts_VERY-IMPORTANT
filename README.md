@@ -258,6 +258,8 @@ Add the button section to the body:
 
 ## Step 4: Implement the text section
 
+![image](https://github.com/luiscoco/flutter_building_layouts_VERY-IMPORTANT/assets/32194879/3378b866-d602-484a-8441-b5821471409f)
+
 Define the text section as a variable. Put the text in a Container and add padding along each edge. Add the following code just below the buttonSection declaration:
 
 **lib/main.dart (textSection)**
